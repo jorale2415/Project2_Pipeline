@@ -5,6 +5,11 @@ resource "azurerm_resource_group" "My_Rgs" {
   location = var.resource_groups.key.LOCATION[count.index]
 }
 
+resource "azurerm_resource_group" "MyResource" {
+   name = "TEST_WESTUS"
+   location = "West US"
+}
+
 # Creates 2) 1 vnet, 3 tier subnets, 1 bastion subnet, bastion host, bastion nsg with security rules
 module "network" {
   source = "github.com/jorale2415/Terraform_Modules/Mod_N_Tier_Vnet"
