@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "My_Rgs" {
   name = "${var.team}-${var.resource_groups.key.NAME[count.index]}"
   location = var.resource_groups.key.LOCATION[count.index]
 }
-resource "azurerm_resource_group" "MyResource" {
+resource "azurerm_resource_group" "test_rg" {
    name = "example-name"
    location = "West US"
 }
